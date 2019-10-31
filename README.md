@@ -12,7 +12,7 @@ where this is just one of the buildpacks you'll be working with.
 
     $ cat .buildpacks
     git://github.com/heroku/heroku-buildpack-ruby.git
-    git://github.com/dz0ny/heroku-buildpack-zip.git
+    git://github.com/hasibulkabir/heroku-buildpack-rarlab.git
 
     $ heroku config:add BUILDPACK_URL=git://github.com/ddollar/heroku-buildpack-multi.git
 
