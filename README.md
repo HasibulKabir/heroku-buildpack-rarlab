@@ -17,3 +17,7 @@ where this is just one of the buildpacks you'll be working with.
     $ heroku config:add BUILDPACK_URL=git://github.com/ddollar/heroku-buildpack-multi.git
 
 By this you can use rar and unrar command.
+
+### Another method
+    heroku config:add BUILDPACK_URL=git://github.com/HasibulKabir/heroku-buildpack-rarlab.git"
+    
