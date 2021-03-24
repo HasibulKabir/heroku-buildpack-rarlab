@@ -20,3 +20,6 @@ By this you can use rar and unrar command.
 
 ### Another method
     heroku buildpacks:add https://github.com/HasibulKabir/heroku-buildpack-rarlab
+
+### Please donate in [PayPal](https://www.paypal.me/hasibulkabir)
+### (C) [Hasibul Kabir](https://github.com/HasibulKabir)
