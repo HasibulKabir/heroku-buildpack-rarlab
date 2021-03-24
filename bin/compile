@@ -1,17 +1,23 @@
 #!/bin/sh
 
 echo "-----> Installing heroku buildpack RarLab"
+
 BUILD_DIR=$1
+VENDOR_DIR=".heroku/vendor"
+
 cd $BUILD_DIR
-mkdir -p "vendor" 
-cd "vendor"
+mkdir -p $VENDOR_DIR
+cd $VENDOR_DIR
+
 DOWNLOAD_URL="https://www.rarlab.com/rar/rarlinux-x64-6.0.0.tar.gz"
 curl -L  --silent $DOWNLOAD_URL | tar xz --strip-components=1
+
 PROFILE_PATH="$BUILD_DIR/.profile.d/rar.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:${HOME}/vendor"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:${HOME}/.heroku/vendor"' >> $PROFILE_PATH
+
 PROFILE_PATH="$BUILD_DIR/.profile.d/unrar.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:${HOME}/vendor"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:${HOME}/.heroku/vendor"' >> $PROFILE_PATH
 
 echo "Done."
