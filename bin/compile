@@ -9,7 +9,7 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 
-DOWNLOAD_URL="https://www.rarlab.com/rar/rarlinux-x64-6.0.0.tar.gz"
+DOWNLOAD_URL="https://www.rarlab.com/rar/rarlinux-x64-6.0.1.tar.gz"
 curl -L  --silent $DOWNLOAD_URL | tar xz --strip-components=1
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/rar.sh"
@@ -20,4 +20,4 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/unrar.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:${HOME}/.heroku/vendor"' >> $PROFILE_PATH
 
-echo "Done."
+echo "-----> Done."
