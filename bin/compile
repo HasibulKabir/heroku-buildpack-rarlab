@@ -20,5 +20,4 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/unrar.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:${HOME}/.heroku/vendor"' >> $PROFILE_PATH
 
-echo "-----> Done."
-echo "-----> Adding RarLab buildpack ♥"
+echo "-----> Successfully installed RarLab buildpack ♥"
